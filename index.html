@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cronograma de Trabajo - 5 Semanas (Matcheo de Disponibilidad)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 10px; background: #f0f0f0; }
+        .container { max-width: 1400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .header { text-align: center; background: linear-gradient(45deg, #1e3a8a, #dc2626); color: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px;}
+        .header h1 { margin: 0 0 10px 0; font-size: 28px;}
+        .header p { margin: 5px 0; font-size: 16px;}
+        .excel-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; border: 2px solid #000;}
+        .excel-table th { background: #4472C4; color: #fff; border: 1px solid #000; padding: 8px; font-size: 11px;}
+        .excel-table td { border: 1px solid #000; padding: 6px; font-size: 10px; min-height: 40px;}
+        .col-fecha { background: #E7E6E6; font-weight: bold; text-align: center;}
+        .col-dia { background: #F2F2F2; font-weight: bold; text-align: center;}
+        .col-disponibles { font-size: 9px;}
+        .col-tareas { font-size: 9px;}
+        .col-coord { font-size: 9px;}
+        .weekend { background: #FFE6E6 !important;}
+        .matcheo { background: #d1f2eb !important; }
+        .tarea { display: block; padding: 2px 4px; margin: 2px 0; border-radius: 3px; font-size: 8px; font-weight: bold;}
+        .minisumo { background: #2E75B6; color: #fff; }
+        .cohete { background: #C5504B; color: #fff; }
+        .alta { background: #833C0C; color: #fff; }
+        .media { background: #D99694; color: #000; }
+        .baja { background: #70AD47; color: #fff; }
+        .coord { background: #7030A0; color: #fff; }
+        .disponible { color: #008000; font-weight: bold; }
+        .no-disponible { color: #FF0000; font-weight: bold; }
+        .leyenda { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;}
+        .leyenda-item { border: 1px solid #ccc; padding: 10px; border-radius: 5px; background: #f9f9f9;}
+        .leyenda-item h4 { margin: 0 0 8px 0; font-size: 12px;}
+        .color-ejemplo { display: inline-block; width: 60px; padding: 2px; margin: 2px 5px 2px 0; border-radius: 2px; font-size: 8px; text-align: center;}
+        .milestone { background: linear-gradient(45deg, #2E75B6, #4472C4); color: #fff; padding: 12px; text-align: center; font-weight: bold; margin: 15px 0; border-radius: 5px; font-size: 14px;}
+        .milestone-cohete { background: linear-gradient(45deg, #C5504B, #D99694); color: #fff; padding: 12px; text-align: center; font-weight: bold; margin: 15px 0; border-radius: 5px; font-size: 14px;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>CRONOGRAMA DE TRABAJO DUAL (5 SEMANAS)</h1>
+        <p><strong>ROBOTS MINISUMO + COHETE HIDRÁULICO</strong></p>
+        <p>Periodo: 2 Septiembre - 6 Octubre 2024</p>
+    </div>
+
+    <div class="milestone">💡 El bloque <span style="background:#d1f2eb; padding:2px 6px; border-radius:4px;">verde claro</span> es el horario con mayor coincidencia de integrantes clave: <b>MARTES 11:00-14:00</b></div>
+
+    <table class="excel-table">
+        <thead>
+            <tr>
+                <th class="col-fecha">FECHA</th>
+                <th class="col-dia">DÍA</th>
+                <th class="col-disponibles">DISPONIBLES</th>
+                <th class="col-tareas">MINISUMO</th>
+                <th class="col-tareas">COHETE</th>
+                <th class="col-coord">COORDINACIÓN</th>
+            </tr>
+        </thead>
+        <tbody>
+<!-- SEMANA 1 -->
+<tr>
+    <td class="col-fecha">02-Sep</td><td class="col-dia">LUN</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP, Ileana</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span><br>
+        <span class="disponible">Diego (13:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Ensamblaje chasis</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Bocetos iniciales</span></td>
+    <td class="col-coord"><span class="tarea coord">Revisión materiales</span></td>
+</tr>
+<tr class="matcheo">
+    <td class="col-fecha">03-Sep</td><td class="col-dia">MAR</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Pruebas funcionales</span><span class="tarea minisumo">Calibración sensores</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Definir materiales</span></td>
+    <td class="col-coord"><span class="tarea coord">Planificación semana</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">04-Sep</td><td class="col-dia">MIÉ</td>
+    <td class="col-disponibles">
+        <span class="no-disponible">Ileana, Ever, Ramos, Diego</span><br>
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span><br>
+        <span class="disponible">Regina (15-18)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Debug PCB</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Investigación aerodinámica</span></td>
+    <td class="col-coord"><span class="tarea baja">Documentar avances</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">05-Sep</td><td class="col-dia">JUE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Diego (13:00+)</span><br>
+        <span class="disponible">Camila (13:30+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Integración electrónica</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Primer prototipo</span></td>
+    <td class="col-coord"><span class="tarea coord">Control calidad</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">06-Sep</td><td class="col-dia">VIE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Ajuste mecánico</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Cálculo presión</span></td>
+    <td class="col-coord"><span class="tarea coord">Checklist semanal</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">07-Sep</td><td class="col-dia">SÁB</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Reto firmware</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Diseño CAD</span></td>
+    <td class="col-coord"><span class="tarea baja">Resumen diario</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">08-Sep</td><td class="col-dia">DOM</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Documentar código</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Timeline proyecto</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan lunes</span></td>
+</tr>
+<!-- SEMANA 2 -->
+<tr>
+    <td class="col-fecha">09-Sep</td><td class="col-dia">LUN</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP, Ileana</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span><br>
+        <span class="disponible">Diego (13:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Mejoras control</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajustar boceto</span></td>
+    <td class="col-coord"><span class="tarea baja">Revisión avances</span></td>
+</tr>
+<tr class="matcheo">
+    <td class="col-fecha">10-Sep</td><td class="col-dia">MAR</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Prueba motores</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Optimizar estructura</span></td>
+    <td class="col-coord"><span class="tarea coord">Feedback grupo</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">11-Sep</td><td class="col-dia">MIÉ</td>
+    <td class="col-disponibles">
+        <span class="no-disponible">Ileana, Ever, Ramos, Diego</span><br>
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span><br>
+        <span class="disponible">Regina (15-18)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Ajuste sensores</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Materiales finales</span></td>
+    <td class="col-coord"><span class="tarea baja">Reunión opcional</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">12-Sep</td><td class="col-dia">JUE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Diego (13:00+)</span><br>
+        <span class="disponible">Camila (13:30+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Código principal</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Simulación digital</span></td>
+    <td class="col-coord"><span class="tarea coord">Distribuir tareas</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">13-Sep</td><td class="col-dia">VIE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (13:30+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Test sensores</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Cotizar materiales</span></td>
+    <td class="col-coord"><span class="tarea baja">Actualizar bitácora</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">14-Sep</td><td class="col-dia">SÁB</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Integrar mejoras</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Maqueta física</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan domingo</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">15-Sep</td><td class="col-dia">DOM</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Refactor código</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Pruebas estáticas</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan lunes</span></td>
+</tr>
+<!-- SEMANA 3 -->
+<tr>
+    <td class="col-fecha">16-Sep</td><td class="col-dia">LUN</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP, Ileana</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span><br>
+        <span class="disponible">Diego (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Mantenimiento</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ensamble parcial</span></td>
+    <td class="col-coord"><span class="tarea baja">Monitoreo semanal</span></td>
+</tr>
+<tr class="matcheo">
+    <td class="col-fecha">17-Sep</td><td class="col-dia">MAR</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Pruebas finales</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajustes estructura</span></td>
+    <td class="col-coord"><span class="tarea coord">Checkpoint semana</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">18-Sep</td><td class="col-dia">MIÉ</td>
+    <td class="col-disponibles">
+        <span class="no-disponible">Ileana, Ever, Ramos, Diego</span><br>
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span><br>
+        <span class="disponible">Regina (15-18)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Backup datos</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Cálculo peso</span></td>
+    <td class="col-coord"><span class="tarea baja">Doc. técnica</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">19-Sep</td><td class="col-dia">JUE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Diego (15:00+)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Test integral</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Montaje final</span></td>
+    <td class="col-coord"><span class="tarea coord">Validar proyectos</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">20-Sep</td><td class="col-dia">VIE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Simulación combate</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajuste presión</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan sábado</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">21-Sep</td><td class="col-dia">SÁB</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Documentar pruebas</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Fotos y video</span></td>
+    <td class="col-coord"><span class="tarea baja">Bitácora gráfica</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">22-Sep</td><td class="col-dia">DOM</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Optimizar peso</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajuste final CAD</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan lunes</span></td>
+</tr>
+<!-- SEMANA 4 -->
+<tr>
+    <td class="col-fecha">23-Sep</td><td class="col-dia">LUN</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP, Ileana</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span><br>
+        <span class="disponible">Diego (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Revisión software</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Validación física</span></td>
+    <td class="col-coord"><span class="tarea baja">Checklist semana</span></td>
+</tr>
+<tr class="matcheo">
+    <td class="col-fecha">24-Sep</td><td class="col-dia">MAR</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Pruebas finales</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajuste estructura</span></td>
+    <td class="col-coord"><span class="tarea coord">Evaluación parcial</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">25-Sep</td><td class="col-dia">MIÉ</td>
+    <td class="col-disponibles">
+        <span class="no-disponible">Ileana, Ever, Ramos, Diego</span><br>
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span><br>
+        <span class="disponible">Regina (15-18)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Actualizar firmware</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Montaje soporte</span></td>
+    <td class="col-coord"><span class="tarea baja">Notas técnicas</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">26-Sep</td><td class="col-dia">JUE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Diego (15:00+)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Competencia interna</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Pruebas de campo</span></td>
+    <td class="col-coord"><span class="tarea coord">Balance recursos</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">27-Sep</td><td class="col-dia">VIE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Mejoras movilidad</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Reporte pruebas</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan sábado</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">28-Sep</td><td class="col-dia">SÁB</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Video presentación</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Fotos finales</span></td>
+    <td class="col-coord"><span class="tarea baja">Bitácora gráfica</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">29-Sep</td><td class="col-dia">DOM</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Backup final</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Cierre CAD</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan lunes</span></td>
+</tr>
+<!-- SEMANA 5 -->
+<tr>
+    <td class="col-fecha">30-Sep</td><td class="col-dia">LUN</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP, Ileana</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span><br>
+        <span class="disponible">Diego (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Ensayo competencia</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Pruebas presión</span></td>
+    <td class="col-coord"><span class="tarea baja">Preparar martes</span></td>
+</tr>
+<tr class="matcheo">
+    <td class="col-fecha">01-Oct</td><td class="col-dia">MAR</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Competencia simulada</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajustes finales</span></td>
+    <td class="col-coord"><span class="tarea coord">Evaluación final</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">02-Oct</td><td class="col-dia">MIÉ</td>
+    <td class="col-disponibles">
+        <span class="no-disponible">Ileana, Ever, Ramos, Diego</span><br>
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span><br>
+        <span class="disponible">Regina (15-18)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Reporte de errores</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Ajuste lanzador</span></td>
+    <td class="col-coord"><span class="tarea baja">Notas cierre</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">03-Oct</td><td class="col-dia">JUE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ramos, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Diego (15:00+)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea alta">Entrega robot</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Pruebas integrales</span></td>
+    <td class="col-coord"><span class="tarea coord">Resumen semanal</span></td>
+</tr>
+<tr>
+    <td class="col-fecha">04-Oct</td><td class="col-dia">VIE</td>
+    <td class="col-disponibles">
+        <span class="disponible">Ever, Ileana, JP</span><br>
+        <span class="disponible">Tello (11-14)</span><br>
+        <span class="disponible">Camila (15:00+)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Feedback competencia</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Fotos entrega</span></td>
+    <td class="col-coord"><span class="tarea baja">Plan sábado</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">05-Oct</td><td class="col-dia">SÁB</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Cierre bitácora</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Documentar resultados</span></td>
+    <td class="col-coord"><span class="tarea baja">Cierre semana</span></td>
+</tr>
+<tr class="weekend">
+    <td class="col-fecha">06-Oct</td><td class="col-dia">DOM</td>
+    <td class="col-disponibles">
+        <span class="disponible">JP</span><br>
+        <span class="disponible">Tello (11-14)</span>
+    </td>
+    <td class="col-tareas"><span class="tarea minisumo">Celebración</span></td>
+    <td class="col-tareas"><span class="tarea cohete">Entrega final</span></td>
+    <td class="col-coord"><span class="tarea alta">Cierre total</span></td>
+</tr>
+        </tbody>
+    </table>
+    <div class="milestone-cohete">🚀 SIGUIENTE FASE: Documentación y Presentación Final</div>
+    <div class="leyenda">
+        <div class="leyenda-item">
+            <h4>Colores de Tareas</h4>
+            <div class="color-ejemplo minisumo">Minisumo</div>
+            <div class="color-ejemplo cohete">Cohete</div>
+            <div class="color-ejemplo alta">Alta prioridad</div>
+            <div class="color-ejemplo media">Media</div>
+            <div class="color-ejemplo baja">Baja</div>
+            <div class="color-ejemplo coord">Coordinación</div>
+            <div class="color-ejemplo matcheo" style="background:#d1f2eb;">Mayor coincidencia</div>
+        </div>
+        <div class="leyenda-item">
+            <h4>Disponibilidad</h4>
+            <span class="disponible">✅ Disponible</span><br>
+            <span class="no-disponible">❌ No disponible</span>
+        </div>
+        <div class="leyenda-item">
+            <h4>Notas</h4>
+            <ul style="font-size:11px;">
+                <li><b>Bloques <span style="background:#d1f2eb; padding:2px 4px; border-radius:3px;">verde claro</span>:</b> Mejor horario presencial posible (Martes 11-14).</li>
+                <li>Regina solo miércoles 15:00-18:00 (JP y Camila pueden acompañar).</li>
+                <li>Tello solo 11:00 a 14:00 todos los días.</li>
+                <li>Ever sólo martes y viernes. Diego solo lunes/jueves (según semana/hora).</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
